@@ -1,8 +1,17 @@
 <!DOCTYPE html>
-
+{% comment %} {%load crispy_forms_tags %}  {% endcomment %}
 <html>
-    <form action="" method="post">
-        {{% csrf_token %}}
-        {{form}}
-    </form>   
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="w-5/12 h-1/2 bg-blue-100 m-auto my-40 flex flex-col justify-center gap-12 rounded-xl">
+        <h1 class="flex items-center justify-center m-auto relative -top-6 w-2/3 h-16 bg-blue-300 rounded-xl">REGISTER LOGIN  PAGE:</h1>
+        <form action="" method="post" class=" flex flex-col w-2/3 h-full gap-12 m-auto">
+            {% csrf_token %}
+            {{form}}
+            <button class= "w-40 h-16 m-auto rounded-xl relative -bottom-10  bg-blue-500 text-white">submit</button>
+        </form>   
+    </div> 
+</body>
 </html>    
